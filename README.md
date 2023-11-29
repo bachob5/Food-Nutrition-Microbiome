@@ -1,6 +1,7 @@
 # Food-Nutrition-Microbiome
-This project makes part of the first implementation study related to Food&Nutrition comunity (https://elixir-europe.org/communities/food-and-nutrition) in ELIXIR infrastructure. 
-It aims at automating the retrieval and the use of public human microbiome datasets related to diet observation and intervention studies. 
+This project makes part of the first implementation study related to Food&Nutrition comunity (https://elixir-europe.org/communities/food-and-nutrition) in ELIXIR Europe infrastructure and the National Italian project ELIXIRxNextGenIT: Consolidation of the Italian Infrastructure for Omics and Bioinformatics (https://elixir-italy.org/elixir-x-nextgenerationit-consolidation-of-the-italian-infrastructure-for-omics-data-and-bioinformatics/).
+
+The present repository aims at providing an automated retrieval routine to use public human microbiome datasets related to diet observation and intervention studies. 
 
 The first data source used here to find human microbiome data is Mgnify (https://www.ebi.ac.uk/metagenomics). 
 The availability of an Application Programming Interface (API) in Mgnify allows to set up a routine data retrieval to keep the repository up to date. 
