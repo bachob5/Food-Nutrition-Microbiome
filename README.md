@@ -14,6 +14,12 @@ To make use of the scripts of this repository, it is required to install python 
 
 To obtain all the human microbiome studies present in mgnify resource simply run the following code:
 
-python Mgnify_Query.py
+	python Mgnify_Query.py
 
 The script yield the following output file 'Mgnify_HumanAssociatedBiomes.csv' containing all the available human microbiome data summed to 859 studies (updated on November 15, 2023).
+
+The abstracts of retrieved studies were then searched using pre-defined terms relevant to dietary related experiments as follows:
+
+	python searchMgnifyAbstracts.py Mgnify_HumanAssociatedBiomes.csv 
+
+Accordingly, the file 'Mgnify_HumanAssociatedBiomes_DietSelectedStudies.csv' was produced including 10 studies annotated as relevant for the searched terms.
