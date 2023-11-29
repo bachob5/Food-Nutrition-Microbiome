@@ -23,3 +23,7 @@ The abstracts of retrieved studies were then searched using pre-defined terms re
 	python searchMgnifyAbstracts.py Mgnify_HumanAssociatedBiomes.csv 
 
 Accordingly, the file 'Mgnify_HumanAssociatedBiomes_DietSelectedStudies.csv' was produced including 10 studies annotated as relevant for the searched terms.
+
+Analyses results available for each Food and Nutrition study can be retrieved and explored using the following code, which provides the links to the results for each study. The output is named starting by the studyID (e.g. MGYS00000526_RelatedResults.csv). All outputs are relevant to this project are provided in this repository.
+
+	python getRelatedStudyResults.py Mgnify_HumanAssociatedBiomes_DietSelectedStudies.csv 
