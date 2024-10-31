@@ -1,19 +1,31 @@
 import sys
 
-TermsOfInterest=[['diet','intervention'],['diet', 'observation']]
+TermsOfInterest=[['diet','intervention'],['diet', 'observation'], ['obesity', 'diet'], ['nutrient', 'autism'], ['probiotics','gut'], ['diet', 'gut'], ['gut', 'prebiotic']]
 
 f_in=sys.argv[1]
 f_out=f_in.split('.')[0]+'_DietSelectedStudies.csv'
 
 
+# def searchTerm(t, TermsOfInterest):
+#     for p in TermsOfInterest:
+#         p1=p[0]
+#         p2=p[1]
+#         if p1 and p2 in t:
+#             return True
+#         else:
+#             return False
+
 def searchTerm(t, TermsOfInterest):
+    i=0
     for p in TermsOfInterest:
         p1=p[0]
         p2=p[1]
         if p1 and p2 in t:
-            return True
-        else:
-            return False
+            i+=1
+    if i > 0:
+        return True
+    else:
+        return False
     
 
 def getRelevantStudies(fin, TermsOfInterest):
