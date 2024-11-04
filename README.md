@@ -1,7 +1,7 @@
 # Food-Nutrition-Microbiome
 This project makes part of the first implementation study related to Food&Nutrition comunity (https://elixir-europe.org/communities/food-and-nutrition) in ELIXIR Europe infrastructure and the National Italian project ELIXIRxNextGenIT: Consolidation of the Italian Infrastructure for Omics and Bioinformatics (https://elixir-italy.org/elixir-x-nextgenerationit-consolidation-of-the-italian-infrastructure-for-omics-data-and-bioinformatics/).
 
-The present repository aims at providing an automated retrieval routine to use public human microbiome datasets related to diet observation and intervention studies. 
+The present repository aims at providing an automated retrieval routine to use public human microbiome datasets related to diet observation and intervention studies. This makes part of data FAIRness characteristics verification for potential use in automated bioinformatics pipelines and data alignments efforts across different data sources.
 
 The first data source used here to find human microbiome data is Mgnify (https://www.ebi.ac.uk/metagenomics). 
 The availability of an Application Programming Interface (API) in Mgnify allows to set up a routine data retrieval to keep the repository up to date. 
@@ -9,11 +9,15 @@ The API of Magnify was exploited to create a general purpose python retrieval sc
 the retrieved data is available for further local parsing to flag only the diet-related studies using text and data mining techniques fed by ontology terms (e.g. ONS: https://www.ebi.ac.uk/ols4/ontologies/ons) 
 and relational terms present in PhenotypeDB (https://dashin.eu/interventionstudies/).
 
-According to the results obtained from the text mining routine, the repository will be regularly updated with the newly obtained results. Some terms used for text mining purposes are enriched after manual curation of projects and studies descriptions and abstracts.
+Additional data sources were considered essential during the execution of this study, namely MG-RAST (Metagenomics Analysis Server: https://www.mg-rast.org/) and JGI (Joint Genome Institute: https://genome.jgi.doe.gov/portal/), as they offer an important and curated set of human microbiome data. As done with Mgnify these databases were explored for human-associated microbiome data using their specific APIs. The related data were retrieved and filtered for diet-related studies using ad-hoc python scripts documented below. 
+
+According to the results obtained from the text mining routine, this repository will be regularly updated with the newly obtained results. Some terms used for text mining purposes were enriched also from manual mining of projects and studies descriptions and abstracts.
 
 To make use of the scripts of this repository, it is required to install python 3 with the following libraries: requests, pandas, collections, pathlib, itertools, json, tqdm, urllib3.
 
-To reduce the space usage, here we included only example files. However, all scripts are fully functional and they can be run locally to get the complete results. 
+To reduce the space usage, here we included only example files. However, all scripts are fully functional and they can be run locally to get the complete results.
+
+In the following, a step by step guide to retrieve and parse the data from the above mentioned databases is provided:
 
 # Mgnify: data retrieval and analysis
 
@@ -21,7 +25,7 @@ To obtain all the human microbiome studies present in mgnify resource simply run
 
 	python Mgnify_Query.py
 
-The script yield the following output file 'Mgnify_HumanAssociatedBiomes.csv' containing all the available human microbiome data summed to 859 studies (updated on November 15, 2023).
+The script yield the following output file 'Mgnify_HumanAssociatedBiomes.csv' containing all the available human microbiome data summed to 882 studies (updated on November 04, 2024).
 
 The abstracts of retrieved studies were then searched using pre-defined terms relevant to dietary related experiments as follows:
 
