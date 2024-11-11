@@ -1,16 +1,11 @@
-[tool.poetry]
+[project]
 name = "food-nutrition-microbiome"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Add your description here"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.13"
-pandas = "^2.2.3"
-requests = "^2.32.3"
-tqdm = "^4.66.6"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=2.2.3",
+    "requests>=2.32.3",
+    "tqdm>=4.67.0",
+]
